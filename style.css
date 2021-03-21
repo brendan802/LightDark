@@ -63,6 +63,7 @@ nav {
   position: fixed;
   font-family: "Poppins", sans-serif;
   font-size: 24px;
+  font-weight: 900;
   letter-spacing: 3px;
   padding: 35px;
   width: 100vw;
@@ -75,7 +76,7 @@ a {
   color: var(--primary-color);
   text-decoration: none;
   border-bottom: 3px solid transparent;
-  font-weight: bold;
+  font-weight: 900;
 }
 
 a:hover,
@@ -273,7 +274,12 @@ input:checked + .slider::before {
 }
 
 /* media qquery large smartphone */
-/* @media screen and (max-width: 900px) {
+@media screen and (max-width: 900px) {
+  html{
+    overflow-x: hidden;
+  }
+
+  /* Text Scale */
   h1 {
     font-size: 45px;
     margin-right: 8%;
@@ -282,21 +288,56 @@ input:checked + .slider::before {
     font-size: 25px;
     margin-right: 8%;
   }
-  nav {
-    padding-top:20px;
-    margin-right: 0%;
-    margin-left: 0%;
-    z-index: 10;
-    position: fixed;
-    font-family: "Poppins", sans-serif;
-    font-size: 12px;
-    background: rgb(255 255 255 / 50%);
-  }
-  a {
-    color: var(--primary-color);
+
+  /* Nav Bar Scale */
+
+  #nav a {
     text-decoration: none;
     border-bottom: 3px solid transparent;
     font-weight: bold;
+    font-size: .7rem;
+    margin-right: 10%;
+  }
+  .theme-switch-wrapper {
+    display: flex;
+    flex-direction: column;
+    z-index: 100;
+    position: fixed;
+    top: 15%;
+  
+  }
+  /* Come back to switch qeury */
+
+  /* .toggle-text {
+    font-size: 12px;
+    position: relative;
+    top: -4px;
+    right: 5px;
+    color: var(--on-background);
+  } */
+
+  /* Images Scaling */
+
+  .about-container {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .image-container {
+    border: 1px solid var(--secondary-color);
+    border-radius: 10px;
+    padding: 10px 20px;
+    
+    background: var(--background);
+    box-shadow: var(--box-shadow);
+  }
+  
+  img {
+    height: 75px;
+    width: 45px;
   }
 
-} */
+  /* Contact */
+
+
+}
